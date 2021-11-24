@@ -7,7 +7,7 @@ import { Modal } from 'react-responsive-modal';
 
 const VagaView = (props) => {
   const _id = props.match.params.id;
-  const [vaga, setVaga] = useState({});
+  const [filme, setfilme] = useState({});
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -20,7 +20,7 @@ const VagaView = (props) => {
   const getVagaById = async () => {
     const response = await Api.fetchGetById(_id);
     const result = await response.json();
-    setVaga(result);
+    setfilme(result);
   }
 
   const handleDelete = async (evento) => {
@@ -36,10 +36,15 @@ const VagaView = (props) => {
     <div className="container flex-grow-1">
       <div className="row">
         <div className="col">
-          <h1 className="text-center mt-4">{vaga.nome}</h1>
-          <img src={vaga.imagemUrl} alt={vaga.nome} />
+          <h1 className="text-center mt-4">{filme.nome}</h1>
+          <img src={filme.imagemUrl} alt={filme.nome} width="300" height="400" margin-right="-50%"/>
+          <h3 className="text-center">{filme.diretor}</h3>
+          <h3 className="text-center">{filme.duracao}</h3>
+          <h3 className="text-center">{filme.genero}</h3>
+          <h3 className="text-center">{filme.atores}</h3>
+          
           <div className="btn-group mt-3 w-100 d-flex align-items-center justify-content-center">
-            <Link to={`/edit/${vaga.id}`}  className="btn btn-outline-info">Editar</Link>
+            <Link to={`/edit/${filme.id}`}  className="btn btn-outline-info">Editar</Link>
             <button className="btn btn-outline-danger" onClick={onOpenModal}>Excluir</button>
           </div>
         </div>

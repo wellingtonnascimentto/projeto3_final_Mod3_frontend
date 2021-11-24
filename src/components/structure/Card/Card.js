@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Card = (props) => {
-  const vaga = props.data;
+  const filme = props.data;
   return (
-    <Link to={`/view/${vaga._id}`} className="col">
+    <Link to={`/view/${filme._id}`} className="col">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">{ vaga.nome }</h5>
-          <span className="badge bg-primary">{ vaga.imagemUrl }</span>
+          <h5 className="card-title">{ filme.nome }</h5>
+          <img src={filme.imagemUrl} alt=""  width="300" height="400"/>
         </div>
       </div>
     </Link>

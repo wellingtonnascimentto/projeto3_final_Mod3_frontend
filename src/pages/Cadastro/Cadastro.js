@@ -13,7 +13,7 @@ const Cadastro = (props) => {
     const descricao = evento.target.descricao.value;
     const senioridade = evento.target.senioridade.value;
 
-    const vaga = {
+    const filme = {
       titulo,
       salario: parseInt(salario),
       descricao,
@@ -21,7 +21,7 @@ const Cadastro = (props) => {
     }
     
     try {
-      const response = await Api.fetchPost(vaga)
+      const response = await Api.fetchPost(filme)
       const result = await response.json();
       alert(result.message);
       history.push('/'); // forca o historico a voltar para a rota de / => home
@@ -37,7 +37,7 @@ const Cadastro = (props) => {
         <div className="card-title">
           <div className="row">
             <div className="col">
-              <h3>Cadastro de Vagas</h3>
+              <h3>Cadastro de Filmes</h3>
             </div>
           </div>
         </div>
