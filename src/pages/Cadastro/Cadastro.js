@@ -8,16 +8,20 @@ const Cadastro = (props) => {
   const handleSubmit = async (evento) => {
     evento.preventDefault();
     // pego o valor que usuario digitou nos inputs
-    const titulo = evento.target.titulo.value; 
-    const salario = evento.target.salario.value;
-    const descricao = evento.target.descricao.value;
-    const senioridade = evento.target.senioridade.value;
+    const nome = evento.target.nome.value; 
+    const diretor = evento.target.diretor.value;
+    const duracao = evento.target.duracao.value;
+    const genero = evento.target.genero.value;
+    const imagemUrl = evento.target.imagemUrl.value;
+    const atores = evento.target.atores.value;
 
     const filme = {
-      titulo,
-      salario: parseInt(salario),
-      descricao,
-      senioridade
+      nome,
+      diretor,
+      duracao,
+      genero,
+      imagemUrl,
+      atores
     }
     
     try {
@@ -46,35 +50,42 @@ const Cadastro = (props) => {
             <div className="row">
               <div className="col">
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="titulo" id="floatingInput" placeholder="Digite o Titulo"/>
-                  <label htmlFor="floatingInput">Titulo</label>
+                  <input type="text" className="form-control" name="nome" id="floatingInput" placeholder="Digite o Nome do Filme"/>
+                  <label htmlFor="floatingInput">Nome</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <input type="text" className="form-control" name="salario" id="floatingsalario" placeholder="Digite o Salario"/>
-                  <label htmlFor="floatingsalario">Salario</label>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="descricao" id="floatingInput" placeholder="Digite a Descricao"/>
-                  <label htmlFor="floatingInput">Descricao</label>
+                  <input type="text" className="form-control" name="diretor" id="floatingsalario" placeholder="Digite o Nome do Diretor"/>
+                  <label htmlFor="floatingsalario">Diretor</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <select className="form-control" name="senioridade" id="floatingsenioridade" placeholder="Digite a Senioridade">
-                    <option value="junior">Junior</option>
-                    <option value="pleno">Pleno</option>
-                    <option value="pleno">Senior</option>
-                  </select>
-                  <label htmlFor="floatingsenioridade">Senioridade</label>
+                  <input type="text" className="form-control" name="duracao" id="floatingsalario" placeholder="Digite a Duração do Filme em Minutos"/>
+                  <label htmlFor="floatingsalario">Duração</label>
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-floating">
+                  <input type="text" className="form-control" name="genero" id="floatingsalario" placeholder="Digite o Gênero do Filme"/>
+                  <label htmlFor="floatingsalario">Gênero</label>
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-floating">
+                  <input type="text" className="form-control" name="imagemUrl" id="floatingsalario" placeholder="Cole aqui o Url da Imagem"/>
+                  <label htmlFor="floatingsalario">ImagemUrl</label>
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-floating">
+                  <input type="text" className="form-control" name="atores" id="floatingsalario" placeholder="Digite o Nome dos atores"/>
+                  <label htmlFor="floatingsalario">Atores</label>
                 </div>
               </div>
             </div>
+            
             <div className="row">
               <div className="col">
                 <button className="btn btn-success" type="submit">Enviar</button>

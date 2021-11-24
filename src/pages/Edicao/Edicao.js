@@ -52,7 +52,7 @@ const Edicao = (props) => {
         <div className="card-title">
           <div className="row">
             <div className="col">
-              <h3>Edicao da Vagaa</h3>
+              <h3>Edicao da Filme</h3>
             </div>
           </div>
         </div>
