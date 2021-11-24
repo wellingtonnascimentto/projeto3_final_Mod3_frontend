@@ -63,28 +63,28 @@ const Edicao = (props) => {
                 <div className="form-floating mb-3">
                   <input
                     type="text"
-                    value={vaga.titulo}
-                    className="form-control"
-                    name="titulo"
+                    value={vaga.nome}
+                    className="form-control"//
+                    name="nome"
                     id="floatingInput"
                     placeholder="Digite o Titulo"
                     onChange={handleFieldsChange}
                   />
-                  <label htmlFor="floatingInput">Titulo</label>
+                  <label htmlFor="floatingInput">Titulo do filme</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
                   <input
                     type="text"
-                    value={vaga.salario}
+                    value={vaga.diretor}
                     className="form-control"
-                    name="salario"
+                    name="diretor"
                     id="floatingsalario"
-                    placeholder="Digite o Salario"
+                    placeholder="Digite o nome do diretor"
                     onChange={handleFieldsChange}
                   />
-                  <label htmlFor="floatingsalario">Salario</label>
+                  <label htmlFor="floatingsalario">Nome do diretor</label>
                 </div>
               </div>
             </div>
@@ -93,33 +93,58 @@ const Edicao = (props) => {
                 <div className="form-floating mb-3">
                   <input
                     type="text"
-                    value={vaga.descricao}
+                    value={vaga.duracao}
                     className="form-control"
-                    name="descricao"
+                    name="duracao"
                     id="floatingInput"
-                    placeholder="Digite a Descricao"
+                    placeholder="Digite a Duração do filme"
                     onChange={handleFieldsChange}
                   />
-                  <label htmlFor="floatingInput">Descricao</label>
+                  <label htmlFor="floatingInput">Duração do filme</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <select value={vaga.senioridade}
+                  <input value={vaga.genero}
                     className="form-control"
-                    name="senioridade"
+                    name="genero"
                     id="floatingsenioridade"
-                    value={vaga.senioridade}
+                    value={vaga.genero}
                     onChange={handleFieldsChange}
-                    >
-                    <option value="junior">Junior</option>
-                    <option value="pleno">pleno</option>
-                    <option value="senior">senior</option>
-                  </select>
-                  <label htmlFor="floatingsenioridade">Senioridade</label>
+                    >              
+                  </input>
+                  <label htmlFor="floatingsenioridade">Genero do filme</label>
                 </div>
               </div>
             </div>
+            <div className="col">
+                <div className="form-floating mb-3">
+                  <input
+                    type="text"
+                    value={vaga.imagemUrl}
+                    className="form-control"
+                    name="imagemUrl"
+                    id="floatingInput"
+                    placeholder="Digite a url da imagem"
+                    onChange={handleFieldsChange}
+                  />
+                  <label htmlFor="floatingInput">Link da imagem de capa</label>
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-floating mb-3">
+                  <input
+                    type="text"
+                    value={vaga.atores}
+                    className="form-control"
+                    name="atores"
+                    id="floatingInput"
+                    placeholder="Digite os atores e atrizes do filme"
+                    onChange={handleFieldsChange}
+                  />
+                  <label htmlFor="floatingInput">Atrizes e atores do filme</label>
+                </div>
+              </div>
             <div className="row">
               <div className="col">
                 <button className="btn btn-success" type="submit">

@@ -51,7 +51,7 @@ const Cadastro = (props) => {
               <div className="col">
                 <div className="form-floating mb-3">
                   <input type="text" className="form-control" name="nome" id="floatingInput" placeholder="Digite o Nome do Filme"/>
-                  <label htmlFor="floatingInput">Nome</label>
+                  <label htmlFor="floatingInput">Titulo do filme</label>
                 </div>
               </div>
               <div className="col">

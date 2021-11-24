@@ -44,7 +44,7 @@ const VagaView = (props) => {
           <h3 className="text-center">{filme.atores}</h3>
           
           <div className="btn-group mt-3 w-100 d-flex align-items-center justify-content-center">
-            <Link to={`/edit/${filme.id}`}  className="btn btn-outline-info">Editar</Link>
+            <Link to={`/edit/${filme._id}`}  className="btn btn-outline-info">Editar</Link>
             <button className="btn btn-outline-danger" onClick={onOpenModal}>Excluir</button>
           </div>
         </div>
